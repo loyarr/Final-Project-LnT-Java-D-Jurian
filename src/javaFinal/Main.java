@@ -191,8 +191,8 @@ public class Main extends JFrame {
 	            if (!rs.next()) {
 	                JOptionPane.showMessageDialog(null, "Error: Menu tidak ditemukan.");
 	            } else {
-	                int price = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the new price of the menu:"));
-	                int stock = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the new stock of the menu:"));
+	                int price = Integer.parseInt(JOptionPane.showInputDialog(null, "Masukkan harga baru untuk menu:"));
+	                int stock = Integer.parseInt(JOptionPane.showInputDialog(null, "Masukkan stok baru untuk menu:"));
 	                ps = conn.prepareStatement("UPDATE menu SET harga_menu=?, stok_menu=? WHERE kode_menu=?");
 	                ps.setInt(1, price);
 	                ps.setInt(2, stock);
